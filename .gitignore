@@ -37,3 +37,24 @@ sites/default/settings.php
 
 .DS_Store
 .htaccess
+.buildcomplete
+.csslintrc
+.editorconfig
+.eslintignore
+.eslintrc
+.gitattributes
+README.TXT
+autoload.php
+composer.json
+composer.lock
+core
+example.gitignore
+index.php
+misc
+modules
+profiles
+robots.txt
+sites
+update.php
+vendor
+web.config
