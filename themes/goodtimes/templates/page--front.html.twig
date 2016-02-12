@@ -1,0 +1,26 @@
+{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+
+
+
+
+        {% include('@goodtimes/common-header.twig') %}      
+
+{# Main #}
+{% block main %}
+  <div role="main" class="main-container {{ container }} js-quickedit-main-content">
+    <div class="row article-preview-row">
+        {# Content #}
+        {% block content %}
+          {{ page.content }}
+        {% endblock %}
+    </div>
+  </div>
+{% endblock %}
+
+{% if page.footer %}
+  {% block footer %}
+    <footer class="footer {{ container }}" role="contentinfo">
+      {{ page.footer }}
+    </footer>
+  {% endblock %}
+{% endif %}
