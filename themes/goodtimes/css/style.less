@@ -81,7 +81,87 @@
 }
 
 .article-preview-row{
-    width:75%;
-    margin:auto;
     text-align: center;
+}
+
+@screen-xs-max: 768px;
+@screen-sm-min: 768px;
+@element-width: 350px;
+
+.staff-grid{
+    .staff-section{
+         margin: auto;   
+         text-align: center;     
+        h2{
+            text-align: left;
+        }
+        // screens < 768px (e.g. phones)
+        @media (max-width: @screen-xs-max) {  
+            width: (@element-width * 1)+ (1px*10px); // one image per row     
+        }
+        // screen >= 768px (e.g. not phones)
+        @media (min-width: @screen-sm-min) { 
+            width: (@element-width * 3)+ (3px*20px); // one image per row  
+         }
+         .staff-element{
+             overflow:hidden;
+             width:@element-width;
+             display:inline-block;
+             margin: 5px 5px;
+             position:relative;
+             img{
+                 max-width:@element-width;
+             }
+             .caption-block {
+                 background-color: rgba(177,184,186,.5);
+                 position:absolute;
+                 width:@element-width;
+                 top: 325px;
+                 left:0px;
+                 z-index: 100;
+                 padding-top: 10px;
+                 padding-bottom:10px;
+                 color:white;
+                 .name{
+                     padding-left: 5px;
+                     padding-right: 5px;
+                     font-size: 18pt;
+                     font-weight:normal;
+   
+                     overflow: hidden;
+                  }
+                  // displaying the 'Name' property as an href
+                  .name-link {
+                     padding-left: 5px;
+                     padding-right: 5px;
+                     font-size: 18pt;
+                     font-weight:normal;
+                     color:white;
+                     overflow: hidden;
+                     text-decoration: none;
+                     &:hover{
+                         text-decoration:underline;
+                     }
+                  }
+                  .title{
+                      padding-left:5px;
+                      padding-right: 5px;
+                      font-size: 14pt;
+                      font-weight: normal;
+                      overflow: hidden;
+                  }
+                  
+             }
+         }
+    }
+}
+
+.highlighted{
+    margin:auto;
+    width:600px;
+    .field--name-body{
+        text-align: center;
+        font-size:18pt;
+        color: purple;
+    }
 }

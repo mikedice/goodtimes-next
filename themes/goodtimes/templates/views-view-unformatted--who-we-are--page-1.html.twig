@@ -1,0 +1,34 @@
+<div class='staff-grid container-fluid'>
+    <div class='staff-section'>
+        <h2>Our Board of Directors</h2>
+        <hr />
+        {% for row in rows %}
+            {% if row.content['#row']._entity.getType() == 'director' %}
+                {{ row.content }}
+            {% endif %}
+        {% endfor %}
+    </div>
+    
+    <div class='staff-section'>
+        <h2>Our Staff</h2>
+        <hr />
+        
+        {% for row in rows %}
+            {% if row.content['#row']._entity.getType() == 'staffer' %}
+                {{ row.content }}
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class='staff-section'>
+        <h2>Volunteers</h2>
+        <hr />
+
+        {% for row in rows %}
+            {% if row.content['#row']._entity.getType() == 'volunteer' %}
+                {{ row.content }}
+            {% endif %}
+        {% endfor %}
+    </div>
+
+</div>

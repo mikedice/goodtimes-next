@@ -5,6 +5,13 @@
 
         {% include('@goodtimes/common-header.twig') %}      
 
+{# Highlighted #}
+{% if page.highlighted %}
+    {% block highlighted %}
+    <div class="highlighted">{{ page.highlighted }}</div>
+    {% endblock %}
+{% endif %}
+
 {# Main #}
 {% block main %}
   <div role="main" class="main-container {{ container }} js-quickedit-main-content">

@@ -59,7 +59,78 @@ body {
   text-align: center;
 }
 .article-preview-row {
-  width: 75%;
+  text-align: center;
+}
+.staff-grid .staff-section {
   margin: auto;
   text-align: center;
+}
+.staff-grid .staff-section h2 {
+  text-align: left;
+}
+@media (max-width: 768px) {
+  .staff-grid .staff-section {
+    width: 360px;
+  }
+}
+@media (min-width: 768px) {
+  .staff-grid .staff-section {
+    width: 1110px;
+  }
+}
+.staff-grid .staff-section .staff-element {
+  overflow: hidden;
+  width: 350px;
+  display: inline-block;
+  margin: 5px 5px;
+  position: relative;
+}
+.staff-grid .staff-section .staff-element img {
+  max-width: 350px;
+}
+.staff-grid .staff-section .staff-element .caption-block {
+  background-color: rgba(177, 184, 186, 0.5);
+  position: absolute;
+  width: 350px;
+  top: 325px;
+  left: 0px;
+  z-index: 100;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+.staff-grid .staff-section .staff-element .caption-block .name {
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 18pt;
+  font-weight: normal;
+  overflow: hidden;
+}
+.staff-grid .staff-section .staff-element .caption-block .name-link {
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 18pt;
+  font-weight: normal;
+  color: white;
+  overflow: hidden;
+  text-decoration: none;
+}
+.staff-grid .staff-section .staff-element .caption-block .name-link:hover {
+  text-decoration: underline;
+}
+.staff-grid .staff-section .staff-element .caption-block .title {
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 14pt;
+  font-weight: normal;
+  overflow: hidden;
+}
+.highlighted {
+  margin: auto;
+  width: 600px;
+}
+.highlighted .field--name-body {
+  text-align: center;
+  font-size: 18pt;
+  color: purple;
 }
