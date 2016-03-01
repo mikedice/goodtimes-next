@@ -126,8 +126,7 @@ body {
   overflow: hidden;
 }
 .highlighted {
-  margin: auto;
-  width: 600px;
+  text-align: center;
 }
 .highlighted .field--name-body {
   text-align: center;
